@@ -1,37 +1,73 @@
-.shapebox {
-  width: 20vw;
-  height: 20vw;
-  position: absolute;
-  top:50%;
-  left:50%;
-  margin-right:-50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-justify-content: center; /* align horizontal */
-align-items: center; /* align vertical */
+.digit-span-text {
+	text-align:center;
+	font-size: 80px;
+	position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-#cross {
-  background: black;
-  height: 100%;
-  width: 20%;
+
+/* css for numpad */
+.click_square, .square {
+    float:left;
+    position: relative;
+    width: 18%;
+    height: 18%; /* = width for a 1:1 aspect ratio */
+    margin:1%;
+    background-color:#505050;
+    overflow:hidden;
+    color: #fff;
+    border-radius:15px;
+}
+
+.submit_button, .clear_button {
+    float:left;
+    position: relative;
+    width: 47%;
+    height: 15%; /* = width for a 1:1 aspect ratio */
+    margin:1.5%;
+    background-color:#505050;
+    overflow:hidden;
+    color: #fff;
+    border-radius:15px;
+    font-size: 20px;
+}
+
+.red {
+    background-color: red;
+    -webkit-animation: color-change 1s forwards;
+    animation: color-change 1s forwards;
+}
+
+.click_square:hover, .submit_button:hover, .clear_button:hover {
+    background-color: black;
+}
+
+.click_square:active, .submit_button:active, .clear_button:active {
+    background-color: red;
+}
+
+.numbers{
+    font-weight:900;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    top: 50%; 
+}
+
+.numbox {
+  width:35vw;
+  height: 35vw;
   position:absolute;
   top:50%;
   left:50%;
-    transform: translate(-50%, -50%) rotate(45deg) ;
+  margin-right:-50%;
+  transform: translate(-50%,-55%);
 }
 
-#cross:after {
-  background: black;
-  content: "";
-  height: 20%;
-  left: -200%;
-  position: absolute;
-  top: 40%;
-  width: 500%;
+@-webkit-keyframes color-change {
+    0% {background-color: #505050;}
+    35% {background-color: red;}
 }
-
-.responded {
-  visibility: hidden;
-}
-
