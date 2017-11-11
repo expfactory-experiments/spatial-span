@@ -2,7 +2,7 @@
     "name": "Spatial Span",
     "exp_id": "spatial-span",
     "url": "https://www.github.com/expfactory-experiments/spatial-span",
-    "description":"A test of spatial reasoning ability.",
+    "description":"A test of spatial memory and reasoning ability.",
     "instructions": "Read the instructions and respond to the stimuli on the screen.",
     "template":"jspsych",
     "cognitive_atlas_task_id": "trm_4da86b539924c",
