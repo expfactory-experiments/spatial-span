@@ -57,8 +57,13 @@ $( document ).ready(function() {
                          // Endpoint not running, local save
                          error: function(err) {
 
-                             // If error, assue local save
-                             jsPsych.data.localSave('spatial-span_results.csv', 'csv');
+                             if (err.status == 200) {
+                                 document.location = "/next"
+
+                             } else {
+                                 // If error, assue local save
+                                 jsPsych.data.localSave('spatial-span_results.csv', 'csv');
+                             }
                          }
                      });
                  })
