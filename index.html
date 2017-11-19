@@ -46,25 +46,13 @@ $( document ).ready(function() {
 
                  promise.then(function(data) {
 
-
                      $.ajax({
                          type: "POST",
                          url: '/save',
                          data: { "data": data },
                          success: function(){ document.location = "/next" },
                          dataType: "application/json",
-
-                         // Endpoint not running, local save
-                         error: function(err) {
-
-                             if (err.status == 200) {
-                                 document.location = "/next"
-
-                             } else {
-                                 // If error, assue local save
-                                 jsPsych.data.localSave('spatial-span_results.csv', 'csv');
-                             }
-                         }
+                         error: function(err) {jsPsych.data.localSave('spatial-span_results.csv', 'csv')}
                      });
                  })
              }
